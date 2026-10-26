@@ -35,7 +35,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           total=$(gh api graphql -f query='query { user(login: "${{ github.repository_owner }}") { contributionsCollection { contributionCalendar { totalContributions } } } }' --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
-          sed -i "s|<!--contrib-->.*<!--/contrib-->|<!--contrib-->**$total** contributions in the last year<!--/contrib-->|" README.md
+          sed -i "s|<!--contrib-->[0-9]*<!--/contrib-->|<!--contrib-->$total<!--/contrib-->|" README.md
           if ! git diff --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
