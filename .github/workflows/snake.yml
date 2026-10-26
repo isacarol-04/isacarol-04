@@ -1,0 +1,44 @@
+name: Snake & contributions
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=#5B8A72&color_dots=#ebedf0,#c6dbcc,#A8C5A0,#7E9C8A,#5B8A72
+            dist/github-snake-dark.svg?color_snake=#A8C5A0&color_dots=#161b22,#24372c,#3d5c4a,#5B8A72,#A8C5A0
+
+      - name: Publish snake to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update contribution count
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          total=$(gh api graphql -f query='query { user(login: "${{ github.repository_owner }}") { contributionsCollection { contributionCalendar { totalContributions } } } }' --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+          sed -i "s|<!--contrib-->.*<!--/contrib-->|<!--contrib-->**$total** contributions in the last year<!--/contrib-->|" README.md
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -am "Update contribution count"
+            git push
+          fi
