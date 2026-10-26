@@ -1,16 +1,18 @@
-## Hi there 👋
+# Hi, I'm Isabelle 👋🌿
 
-<!--
-**isacarol-04/isacarol-04** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🍵 Student at **Inatel**<br>
+💻 Building things for the web<br>
+🤖 Currently learning Machine Learning
 
-Here are some ideas to get you started:
+### 🧪 Tech I use
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<img src="https://skillicons.dev/icons?i=js,ts,react,html,css,python,sklearn,pytorch,git,gitlab,docker&perline=11" alt="Tech stack" height="28" />
+
+### 🌱 Activity
+
+<img src="https://ghchart.rshah.org/5B8A72/isacarol-04" alt="Contribution graph" width="100%" />
+
+### 🍃 Say hi
+
+<a href="https://www.linkedin.com/in/isabelle-caroline"><img src="https://img.shields.io/badge/LinkedIn-5B8A72?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="mailto:isabellecarolinep04@gmail.com"><img src="https://img.shields.io/badge/Email-5B8A72?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
