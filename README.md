@@ -10,12 +10,13 @@
 
 ### 🌱 Activity
 
-<!--contrib-->**657** contributions in the last year<!--/contrib-->
+✨ <b><!--contrib-->657<!--/contrib--></b> contributions in the last year
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/isacarol-04/isacarol-04/output/github-snake-dark.svg" />
   <img src="https://raw.githubusercontent.com/isacarol-04/isacarol-04/output/github-snake.svg" alt="Snake eating contributions" width="100%" />
 </picture>
+
 ### 🍃 Say hi
 
 <a href="https://www.linkedin.com/in/isabelle-caroline"><img src="https://img.shields.io/badge/LinkedIn-5B8A72?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
