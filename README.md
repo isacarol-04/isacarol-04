@@ -10,7 +10,7 @@
 
 ### 🌱 Activity
 
-✨ <b><!--contrib-->570<!--/contrib--></b> contributions in the last year
+✨ <b><!--contrib-->581<!--/contrib--></b> contributions in the last year
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/isacarol-04/isacarol-04/output/github-snake-dark.svg" />
